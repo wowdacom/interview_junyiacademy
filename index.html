@@ -4,9 +4,13 @@
 
 <h1>Q1</h1>
 <p id="q1demo"></p>
+<br>
+<h1>Q2</h1>
+<p id="q2demo"></p>
 
 <script>
-var result = ''
+var result = '',
+    result2 = 0
 
 function reverse (words) {
     if (typeof words === 'string') {
@@ -21,8 +25,23 @@ result = reverse("dep pilfs salcmoors itnat ropmi")
 
 document.getElementById("q1demo").innerHTML = result;
 
+function filterCommonMultiple (myNumber) {
+    let start = 1,
+        currentNumber = 1,
+        end = typeof myNumber === 'number' ? myNumber : 0,
+        result = [];
+    while (currentNumber <= end) {
+        if (currentNumber % (3*5) == 0 || currentNumber % 3 !== 0 && currentNumber % 5 !== 0 ) {
+            result.push(currentNumber) 
+        }
+        currentNumber++;
+    }
+    console.log(result)
+    return result.length
+}
+result2 = filterCommonMultiple(30)
 
-
+document.getElementById("q2demo").innerHTML = result2;
 
 
 
