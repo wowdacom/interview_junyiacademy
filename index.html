@@ -2,12 +2,30 @@
 <html>
 <body>
 
-<h1>The script element</h1>
-
-<p id="demo"></p>
+<h1>Q1</h1>
+<p id="q1demo"></p>
 
 <script>
-document.getElementById("demo").innerHTML = "我第一個程式";
+var result = ''
+
+function reverse (words) {
+    if (typeof words === 'string') {
+        console.log(words.split(" ")[0])
+        return words.split(" ").length > 1 ? words.split(" ").map(item=>item.split("").reverse().join("")).join(" ") : words.split("").reverse().join("")
+    } else {
+        return
+    }
+}
+
+result = reverse("dep pilfs salcmoors itnat ropmi")
+
+document.getElementById("q1demo").innerHTML = result;
+
+
+
+
+
+
 </script> 
 
 </body>
